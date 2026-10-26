@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: './', // ⬅️ 必须加上这行！确保所有图片、样式按相对路径加载，图片才不会挂
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
